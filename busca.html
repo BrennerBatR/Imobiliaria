@@ -1,0 +1,179 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Imobiliária</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="_css/busca.css" />
+    <script src="_javascript/js_busca.js"></script>
+    <link rel="icon" href="_imagens/icone-titulo.png" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="cabecalho">
+        <header>
+            <h1>LOGO</h1>
+            <img src="_imagens/icone-casa.png">
+
+            <nav id="menu"> 
+                <h1>Menu Principal</h1>
+                <ul>
+                    <li>
+                        <a href="principal.html"> Principal</a>
+                    </li>
+                    <li>
+                        <a href="busca.html"> Busca</a>
+                    </li>
+                    <li>
+                        <a href="contato.html"> Contato</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <form action="login.html">
+                <button id="area-cliente">Área do cliente</button>
+            </form>
+        </header>
+    </div>
+
+    <div class="pesquisa">
+        <h1>&nbsp;&nbsp;&nbsp;BUSCA IMÓVEL</h1>
+        <div id="preencha"></div>
+    
+        <form onsubmit="return verificabusca(this)" class="busca" action="_php/busca.php" method="POST">
+            <div id="parte1">
+                <h2>ID imóvel</h2>
+                <input id="id_imovel" onpaste="return false" ondrop="return false" type="text" name="id_imovel" placeholder="ID imóvel" onkeypress="return SomenteNumeros(this)">
+                <br>
+                <h2>Transação:<span>*</span></h2>
+                <input id="venda" onclick="preco_nome()" type="radio" name="transacao" value="">
+                <label for="venda">Venda</label>
+                <br>
+                <input id="locacao" onclick="preco_nome()" type="radio" name="transacao" value="">
+                <label for="locacao">Locação</label>
+                <br>
+                <h2>Tipo Imóvel:</h2>
+                <select id="tipo_imovel" name="tipo_imovel">
+                    <option value='' selected>Selecione um tipo</option>
+                    <option value="1">Casa</option>
+                    <option value="2">Apartamento</option>
+                    <option value="3">Sítio</option>
+                    <option value="4">Lote</option>
+                </select>
+            </div>
+    
+            <div id="parte2">
+                <h2>Situação</h2>
+                <input id="disponivel" type="radio" name="situacao" value="1">
+                <label for="disponivel">Disponivel</label>
+                <br>
+                <input id="alugado" type="radio" name="situacao" value="2">
+                <label for="alugado">Alugado</label>
+                <br>
+                <input id="vendido" type="radio" name="situacao" value="3">
+                <label for="vendido">Vendido</label>
+                <br>
+                <input id="reforma" type="radio" name="situacao" value="4">
+                <label for="reforma">Em reforma</label>
+                <br>
+                <h2>Preço:</h2>
+                <input id="preco" name="preco" type="range" oninput="mostrarPreco(this.value)" min="100" value="2000" max="10000" step="100"
+                />
+                <h3>Abaixo de:</h3>
+                <p> &nbsp;&nbsp;R$
+                    <span id="exibe_preco">2000</span>
+                    <font>,00</font>
+                </p>
+                <input onclick="preco_nome()" id="qualquer_preco" type="radio" name="qualquer_preco" value=''>
+                <label for="qualquer_preco">Qualquer valor</label>
+                <br>
+            </div>
+    
+            <div id="parte3">
+                <h2 id="endereco">Endereço</h2>
+                <h3>Estado:</h3>
+                <select id="estado" name="estado">
+                    <option value='' selected>Selecione um estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+    
+                <h3>Cidade:</h3>
+                <select id="cidades" name="cidades">
+                    <option value='' selected>Selecione uma cidade</option>
+                    <option value="Ipatinga">Ipatinga</option>
+                    <option value="Itabira">Itabira</option>
+                    <option value="Belo Horizonte">Belo Horizonte</option>
+                    <option value="Pedro Leopoldo">Pedro Leopoldo</option>
+                    <option value="João Molevade">João Molevade</option>
+                </select>
+                <h3>Bairro:</h3>
+                <input id="bairro" type="text" name="bairro" placeholder="Bairro" />
+                <h3>Rua:</h3>
+                <input id="rua" type="text" name="rua" placeholder="Rua" />
+                <h3>N°:</h3>
+                <input id="numero" onpaste="return false" ondrop="return false"  type="text" name="numero" placeholder="Nº" onkeypress="return SomenteNumeros(this)" />
+                <h3>CEP:</h3>
+                <input id="cep" onpaste="return false" ondrop="return false" type="text" name="cep" placeholder="00.000-000" onkeypress="return TratarCep(event,this,'##.###-###')" maxlength="10"
+                />
+    
+            </div>
+    
+            <div id="parte4">
+            <h2>Dados</h2>
+    
+            <input id="num_quartos" onpaste="return false" ondrop="return false" type="text" name="num_quartos" placeholder="NºQuartos" onkeypress="return SomenteNumeros(this)">
+            <input id="num_banheiro" onpaste="return false" ondrop="return false" type="text" name="num_banheiro" placeholder="NºBanheiros " onkeypress="return SomenteNumeros(this)"/>
+            <input id="num_salas"  onpaste="return false" ondrop="return false" type="text" name="num_salas" placeholder="NºSalas" onkeypress="return SomenteNumeros(this)"/>
+    
+            <input id="num_suites" onpaste="return false" ondrop="return false"  type="text" name="num_suites" placeholder="NºSuítes" onkeypress="return SomenteNumeros(this)"/>
+            <input id="num_piscina"  onpaste="return false" ondrop="return false"  type="text" name="num_piscina" placeholder="NºPiscinas" onkeypress="return SomenteNumeros(this)"/>
+            <input id="num_andares"  onpaste="return false" ondrop="return false"  type="text" name="num_andares" placeholder="NºAndares" onkeypress="return SomenteNumeros(this)" />
+    
+            <input id="area_total"  onpaste="return false" ondrop="return false"  type="text" name="area_total" placeholder="Área Total" onkeypress="return SomenteNumeros(this)"/>
+            <input id="area_constuida" onpaste="return false" ondrop="return false" type="text" name="area_construida" placeholder="Área Construída" onkeypress="return SomenteNumeros(this)"/>
+            <input id="vaga_garagem"  onpaste="return false" ondrop="return false"  type="text" name="vaga_garagem" placeholder="Vagas Garagem" onkeypress="return SomenteNumeros(this)"/>
+    
+            <h2 id="extras">Extras</h2>
+            <input id="elevador" type="radio" name="elevador" value='' onclick="verifica_radio('elevador')" >
+            <label for="elevador">Elevador</label>
+            <br>
+            <input id="area_gourmet" type="radio" name="area_gourmet" value='' onclick="verifica_radio('area_gourmet')">
+            <label for="area_gourmet">Área Gourmet</label>
+    
+        </div>
+            <input id="concluir" type="submit" name="buscar" value="Buscar">
+        </form>
+    </div>
+    
+    
+    
+    </body>
+    
+    </html>

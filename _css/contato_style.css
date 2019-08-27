@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body{
+    background-color: rgb(235, 251, 255);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.cabecalho{
+    margin-top: -10px;
+    margin-left: -30px;
+    margin-right: -8px;
+    
+}
+
+div.cabecalho header{
+    background-color: #1A2026;
+    height: 79px;
+    width: auto;
+}
+
+
+div.cabecalho h1{
+   
+    position: absolute;
+    color: #969FAA;
+    font-family: 'Lato', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 33px;
+    left: 60px;
+    top: 10px;
+
+}
+
+div.cabecalho img{
+   
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 15px;
+    top: 15px;
+
+}
+
+div.cabecalho h2{
+    position: absolute;
+    color: #FF5729;
+    font-family: Lato;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 62px;
+    width: 100px;
+    text-align: center;
+    margin-left: 50px;
+}
+
+nav#menu{
+    display: block;
+
+}
+
+nav#menu ul{
+    list-style: none; /*tira os marcadores */
+    position: absolute; /*sempre a frente */
+    top: -5px;
+    left: 110px;
+    
+}
+nav#menu li{
+    display: inline-block; /* um do lado do outro */
+    margin-left: 40px;
+}
+
+nav#menu h1{
+    display: none;
+}
+nav#menu a {       /*altera tudo que tem link no menu */
+    color: #47525E;
+    font-family: Lato;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 62px;
+    width: 121px;
+    text-decoration: none; /*ou text-deco : underline */
+ 
+}
+nav#menu a:hover{
+    color: #FF5729;
+}
+
+button#area-cliente{
+    position: absolute;
+    right: 10px;
+    background-color: #FF5729;
+    border-radius: 5px;
+    width: 175px;
+    height: 35px;
+    color: #1A2026;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}

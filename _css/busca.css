@@ -1,0 +1,408 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body{
+    background:url("../_imagens/busca.jpg") no-repeat center top fixed;
+    background-color: rgba(0, 0, 0, 60);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.cabecalho{
+    margin-top: -20px;
+    margin-left: -30px;
+    margin-right: -8px;
+    
+}
+
+div.cabecalho header{
+    background-color: #1A2026;
+    height: 79px;
+    width: auto;
+}
+
+
+div.cabecalho h1{   
+    position: absolute;
+    color: #969FAA;
+    font-family: 'Lato', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 33px;
+    left: 60px;
+    top: 10px;
+}
+
+div.cabecalho img{
+   
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 15px;
+    top: 15px;
+
+}
+
+div.cabecalho h2{
+    position: absolute;
+    color: #FF5729;
+    font-family: Lato;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 62px;
+    width: 100px;
+    text-align: center;
+    margin-left: 50px;
+}
+
+nav#menu{
+    display: block;
+
+}
+
+nav#menu ul{
+    list-style: none; /*tira os marcadores */
+    position: absolute; /*sempre a frente */
+    top: -5px;
+    left: 110px;
+    
+}
+nav#menu li{
+    display: inline-block; /* um do lado do outro */
+    margin-left: 40px;
+}
+
+nav#menu h1{
+    display: none;
+}
+nav#menu a {       /*altera tudo que tem link no menu */
+    color: #47525E;
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 62px;
+    width: 121px;
+    text-decoration: none; /*ou text-deco : underline */
+ 
+}
+nav#menu a:hover{
+    color: #FF5729;
+}
+
+button#area-cliente{
+    position: absolute;
+    right: 20px;
+    background-color: #FF5729;
+    border-radius: 5px;
+    width: 175px;
+    height: 35px;
+    color: #1A2026;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    border: #FF5729;
+    top: 25px;
+}
+button#area-cliente:focus{
+    outline-style: none;
+}
+
+
+div.pesquisa{
+    position: absolute;
+    background-color: #343F4B;
+    opacity: 0.8;
+    width: 98%;
+    height: 80%;
+    top: 170px;  
+    left: 1%; 
+    margin-bottom: 50px;
+}
+div.pesquisa h1{
+    color: rgba(255, 255, 255, 0.705);
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 65px;
+    text-align: left;   
+    margin-top: 1%;
+  
+    
+
+}
+
+div.busca{
+    position: absolute;
+    background-color: #343F4B;
+    opacity: 0.8;
+    width: 98%;
+    height: 80%;
+    top: 17%;  
+    left: 1%; 
+    
+}
+div.busca h1{
+    color: rgba(255, 255, 255, 0.705);
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 65px;
+    text-align: left;   
+    margin-top: 1%;
+
+}
+
+form.busca input[type=radio] + label , input[type=checkbox] + label{ /*personaliza os boteos de seleção */
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: left;
+    
+}
+form.busca input:valid { /*personalizando todos os nomes dentro das caixas do campo com id= busca */
+    color: #8492A6;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    text-align: middle;
+}
+form.busca select{ /*todos campos de select terao essas configurações */
+    background-color: #FFFFFF;
+    border: 1px solid #8492A6;
+    border-radius: 5px;
+    width: 90%;
+    height: 10%;
+    color: #8190A5;
+    font-family:'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 62px;
+    text-align: left;
+}
+
+
+
+form.busca h2{
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    margin-left:-7%;    
+    margin-bottom: 1%;
+}
+
+form.busca span{
+    color: red;
+    font-size: 20px;
+}
+
+div#parte1{ /*aqui começa editar a primeira parte da busca */
+    position: absolute;
+    border: 0px;
+    border-right: 1px solid #c0b3b3;
+    left: 5%;
+    top: 15%;
+    right: 80%;
+    bottom: 5%;
+       
+}
+
+
+input#id_imovel{
+    background-color: #FFFFFF;
+    border: 1px solid #8492A6;
+    border-radius: 5px;
+    width: 90%;
+    height: 7%;
+    margin-top: 2%;
+    margin-bottom: 20%;
+    
+}
+
+input#locacao{
+    margin-bottom: 20%;
+}
+
+
+div#parte2{ /*aqui começa editar a segunda parte da busca */
+    position: absolute;
+    left: 22%;
+    top: 15%;
+    right: 60%;
+    bottom: 5%;
+    border-right: 1px solid #c0b3b3;  
+}
+
+
+div#parte2 h3{
+    color: #FF5729;
+    font-family:'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    
+}
+div#parte2 span{
+    color: #FFFFFF;
+    font-family:'Lato', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 45px;
+    text-align: left;
+}
+div#parte2 font{
+    color: #FFFFFF;
+    font-family:'Lato', sans-serif;
+    font-size: 70%;
+    font-weight: 700;
+    line-height: 45px;
+    text-align: left;
+}
+div#parte2 p{
+    margin-top: -20px;
+    font-size: 35px;
+    color: black;
+}
+
+input#preco {
+    -webkit-appearance: none; 
+    background-color: #FF9052;
+    border-radius: 5px;
+    width: 85%;
+    height: 1%;
+   
+}
+
+input#preco::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18.7px;
+    height: 18.63px;
+    border-radius: 100%; 
+    background:  #FFFFFF;
+    cursor: pointer;
+    border: 1px solid #8492A6;
+    outline-style: none;
+}
+input#preco:focus{
+    outline-style: none;
+}
+
+input#qualquer_preco{
+    margin-top: -1%;
+}
+
+div#parte3{        /*aqui começa editar a terceira parte da busca */
+    position: absolute;
+    left: 42%;
+    top: 15%;
+    bottom: 5%;
+    right: 41%;
+    border-right: 1px solid #c0b3b3; 
+   
+}
+div#parte3 h3{
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: left;
+    margin-bottom: -0.5px;
+    margin-top: -3px;
+}
+input#bairro, #rua{
+    background-color: #FFFFFF;
+    border: 1px solid #8492A6;
+    border-radius: 5px;
+    width: 90%;
+    height: 10%;
+}
+
+
+input#numero{
+    background-color: #FFFFFF;
+    border: 1px solid #8492A6;
+    border-radius: 5px;
+    width: 30%;
+    height: 7%;
+}
+
+input#cep{
+    background-color: #FFFFFF;
+    border: 1px solid #8492A6;
+    border-radius: 5px;
+    width: 80%;
+    height: 7%;
+}
+
+div#parte4{        /* aqui começa a parte 4 */
+    left: 63%;
+    top: 15%;
+    bottom: 5%;
+    position: absolute;
+     
+}
+
+div#parte4 h3{
+    
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: left;
+    margin-bottom: -0.5px;
+    margin-top: -1%;
+}
+div#parte4 input[type="text"]{
+    display: inline-block;
+    background-color: #FFFFFF;
+    border: 1px solid #8492A6;
+    border-radius: 5px;
+    width: 27%;
+    height:10%;
+    margin-bottom: 5%;
+}
+h2#extras{
+    margin-top: -1%;
+    margin-bottom: 1%;
+}
+input#concluir{    
+    position: absolute;
+    background-color: #FF9052;
+    border-radius: 30px;
+    width: 30%;
+    height: 7%;
+    bottom: 5%;
+    right: 5%;
+    border: #FF9052;
+}
+input#concluir:valid {
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 130%;
+    width: 15%;
+    text-align: middle;
+}
+
+input#concluir:focus{
+    outline-style: none;
+}
+
+
+div#preencha {
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+    top: 8%;
+    left: 63%;
+    color: rgb(255, 41, 41);
+    font-size: 25px;
+}

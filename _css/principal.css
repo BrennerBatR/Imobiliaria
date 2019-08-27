@@ -1,0 +1,188 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body{
+    background:url("../_imagens/cidade.jpg") no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.cabecalho{
+    margin-top: -10px;
+    margin-left: -30px;
+    margin-right: -8px;
+    
+}
+
+div.cabecalho header{
+    background-color: #1A2026;
+    height: 79px;
+    width: auto;
+}
+
+
+div.cabecalho h1{
+   
+    position: absolute;
+    color: #969FAA;
+    font-family: 'Lato', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 33px;
+    left: 60px;
+    top: 10px;
+
+}
+
+div.cabecalho img{
+   
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 15px;
+    top: 15px;
+
+}
+
+div.cabecalho h2{
+    position: absolute;
+    color: #FF5729;
+    font-family: Lato;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 62px;
+    width: 100px;
+    text-align: center;
+    margin-left: 50px;
+}
+
+nav#menu{
+    display: block;
+
+}
+
+nav#menu ul{
+    list-style: none; /*tira os marcadores */
+    position: absolute; /*sempre a frente */
+    top: -5px;
+    left: 110px;
+    
+}
+nav#menu li{
+    display: inline-block; /* um do lado do outro */
+    margin-left: 40px;
+}
+
+nav#menu h1{
+    display: none;
+}
+nav#menu a {       /*altera tudo que tem link no menu */
+    color: #47525E;
+    font-family: Lato;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 62px;
+    width: 121px;
+    text-decoration: none; /*ou text-deco : underline */
+ 
+}
+nav#menu a:hover{
+    color: #FF5729;
+}
+
+button#area-cliente{
+    position: absolute;
+    right: 20px;
+    background-color: #FF5729;
+    border-radius: 5px;
+    width: 175px;
+    height: 35px;
+    color: #1A2026;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    border: #FF5729;
+    top: 25px;
+}
+button#area-cliente:focus{
+    outline-style: none;
+}
+div.titulos{
+    top: 10%;
+    left: 3%;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+}
+h1#titulo{
+    color: #1A2026;
+    font-family: 'Lato', sans-serif;
+    font-size: 80px;
+    text-align: left;
+}
+
+h1#subtitulo {
+    color: #1A2026;
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    text-align: left;
+}
+
+section#destaques{
+   
+    background-color: #1A2026;
+    opacity: 0.89;
+    width: 100%;
+    height: 455px;
+    margin-top: 25%;
+   
+}
+
+section#destaques img{
+    width: 260px;
+    height: 170px;
+
+}
+
+section#destaques h1{
+    color: #969FAA;
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 52px;
+    margin-left: 20px;
+}
+
+div#slider ul{
+    list-style: none; /*tira os marcadores */
+    position: absolute;
+    margin-left: 5%;
+    margin-right:5%;
+}
+
+div#slider li{
+    display: inline-block;
+    
+}
+
+div#slider h3{
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+    text-align: left;
+    margin-bottom: -15px;
+
+}
+div#slider p{
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 26px;
+    text-align: left;
+
+}

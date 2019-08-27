@@ -1,0 +1,125 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body{
+    background:url("../_imagens/cidade.jpg") no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.cabecalho{
+    margin-top: -10px;
+    margin-left: -30px;
+    margin-right: -8px;
+}
+
+div.cabecalho header{
+    background-color: #1A2026;
+    height: 140px;
+    width: auto;
+}
+
+
+.cabecalho h1{
+   
+    position: absolute;
+    color: #F95F62;
+    font-family: 'Lato', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    left: 86.5%;
+    top: 35px;
+
+}
+
+
+.cabecalho a#sair {
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+    color: #969FAA;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    left: 88.5%;
+    top: 90px;
+    text-decoration: none;
+}
+
+
+#menu_cliente ul{
+    list-style: none; /*tira os marcadores */
+    position: absolute; /*sempre a frente */
+    top: 30px;
+    left: 20px;
+    
+}
+#menu_cliente li{
+    display: inline-block; /* um do lado do outro */
+    margin-left: 40px;
+}
+
+#menu_cliente h1{
+    display: none;
+}
+#menu_cliente button {       /*altera tudo que tem link no menu_cliente */
+    background: #1A2026;
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 26px;
+    border: #1A2026;
+}
+#menu_cliente button:hover{
+    color: #FF5729;
+
+}
+#menu_cliente button:focus{
+    outline-style: none;
+}
+
+div{  /*TODAS DIVS TERAO ESSE FORMATO! */
+    margin-top: -22px;
+    margin-left: -30px; 
+    margin-right: -8px;
+}
+
+div header{
+    background-color: #4E5F71;
+    height: 80px;
+    width: auto;
+
+}
+
+
+nav#area_escolha li{
+    display: inline-block; /* um do lado do outro */
+    margin-left: 100px;
+    margin-top: 20px;
+  
+
+}
+
+#op_contratos header nav#area_escolha li{
+    margin-left: 80px;
+}
+
+#area_escolha h1{
+    display: none;
+}
+#area_escolha a {       /*altera tudo que tem link no menu_cliente */
+    color: #969FAA;
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    text-align: left;
+    text-decoration: none;
+
+}
+nav#area_escolha a:hover{
+    color: rgb(2, 2, 2);
+}
